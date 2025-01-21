@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Translation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 2em;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="file"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="emoji">🎥</span> Upload Video File</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="video_file">Video File:</label>
+            <input type="file" name="video_file" id="video_file" required><br><br>
+            <label for="target_language">Target Language:</label>
+            <select name="target_language" id="target_language" required>
+                <option value="afrikaans">Afrikaans</option>
+                <option value="albanian">Albanian</option>
+                <option value="arabic">Arabic</option>
+                <option value="armenian">Armenian</option>
+                <option value="bengali">Bengali</option>
+                <option value="bosnian">Bosnian</option>
+                <option value="catalan">Catalan</option>
+                <option value="croatian">Croatian</option>
+                <option value="czech">Czech</option>
+                <option value="danish">Danish</option>
+                <option value="dutch">Dutch</option>
+                <option value="english">English</option>
+                <option value="esperanto">Esperanto</option>
+                <option value="estonian">Estonian</option>
+                <option value="filipino">Filipino</option>
+                <option value="finnish">Finnish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <option value="greek">Greek</option>
+                <option value="gujarati">Gujarati</option>
+                <option value="haitian creole">Haitian Creole</option>
+                <option value="hindi">Hindi</option>
+                <option value="hungarian">Hungarian</option>
+                <option value="icelandic">Icelandic</option>
+                <option value="indonesian">Indonesian</option>
+                <option value="irish">Irish</option>
+                <option value="italian">Italian</option>
+                <option value="japanese">Japanese</option>
+                <option value="javanese">Javanese</option>
+                <option value="kannada">Kannada</option>
+                <option value="khmer">Khmer</option>
+                <option value="korean">Korean</option>
+                <option value="latin">Latin</option>
+                <option value="latvian">Latvian</option>
+                <option value="lithuanian">Lithuanian</option>
+                <option value="macedonian">Macedonian</option>
+                <option value="malay">Malay</option>
+                <option value="malayalam">Malayalam</option>
+                <option value="marathi">Marathi</option>
+                <option value="myanmar">Myanmar</option>
+                <option value="nepali">Nepali</option>
+                <option value="norwegian">Norwegian</option>
+                <option value="polish">Polish</option>
+                <option value="portuguese">Portuguese</option>
+                <option value="punjabi">Punjabi</option>
+                <option value="romanian">Romanian</option>
+                <option value="russian">Russian</option>
+                <option value="serbian">Serbian</option>
+                <option value="sinhala">Sinhala</option>
+                <option value="slovak">Slovak</option>
+                <option value="spanish">Spanish</option>
+                <option value="sundanese">Sundanese</option>
+                <option value="swahili">Swahili</option>
+                <option value="swedish">Swedish</option>
+                <option value="tamil">Tamil</option>
+                <option value="telugu">Telugu</option>
+                <option value="thai">Thai</option>
+                <option value="turkish">Turkish</option>
+                <option value="ukrainian">Ukrainian</option>
+                <option value="urdu">Urdu</option>
+                <option value="vietnamese">Vietnamese</option>
+                <option value="welsh">Welsh</option>
+                <option value="xhosa">Xhosa</option>
+                <option value="yiddish">Yiddish</option>
+                <option value="yoruba">Yoruba</option>
+                <option value="zulu">Zulu</option>
+            </select><br><br>
+            <button type="submit"><span class="emoji">📤</span> Upload and Process</button>
+        </form>
+    </div>
+</body>
+</html>
